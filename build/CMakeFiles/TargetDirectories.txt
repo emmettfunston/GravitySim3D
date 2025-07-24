@@ -1,0 +1,4 @@
+/Users/emmett/Documents/Repositories/GravitySim3D/build/CMakeFiles/glad.dir
+/Users/emmett/Documents/Repositories/GravitySim3D/build/CMakeFiles/GravitySim3D.dir
+/Users/emmett/Documents/Repositories/GravitySim3D/build/CMakeFiles/edit_cache.dir
+/Users/emmett/Documents/Repositories/GravitySim3D/build/CMakeFiles/rebuild_cache.dir
