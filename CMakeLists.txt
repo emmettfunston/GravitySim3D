@@ -10,7 +10,6 @@ set(CMAKE_CXX_EXTENSIONS       OFF)
 find_package(glfw3   REQUIRED)   # Window/context & input
 find_package(glm     REQUIRED)   # Math library (header‑only)
 find_package(OpenGL  REQUIRED)   # macOS ships its own OpenGL framework
-find_package(GLEW    REQUIRED)   # Extension loader
 
 # — GLAD loader (your downloaded source) —
 add_library(glad STATIC
@@ -23,12 +22,16 @@ target_include_directories(glad PUBLIC
 # — Your executable and its sources —
 add_executable(${PROJECT_NAME}
     src/test.cpp
+    src/GLUtilities.cpp
+    src/Shader.cpp
+    src/Mesh.cpp
+    src/PhysicsEngine.cpp
+    src/Camera.cpp
 )
 
 # — Link everything together —
 target_link_libraries(${PROJECT_NAME}
     PRIVATE
-        GLEW::GLEW    # OpenGL Extension Wrangler
         glad          # our loader for modern GL functions
         glfw          # window + context + input
         OpenGL::GL    # Apple’s OpenGL framework
