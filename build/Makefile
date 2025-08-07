@@ -166,6 +166,126 @@ extern/glad/src/glad.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/glad.dir/build.make CMakeFiles/glad.dir/extern/glad/src/glad.c.s
 .PHONY : extern/glad/src/glad.c.s
 
+src/Camera.o: src/Camera.cpp.o
+.PHONY : src/Camera.o
+
+# target to build an object file
+src/Camera.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GravitySim3D.dir/build.make CMakeFiles/GravitySim3D.dir/src/Camera.cpp.o
+.PHONY : src/Camera.cpp.o
+
+src/Camera.i: src/Camera.cpp.i
+.PHONY : src/Camera.i
+
+# target to preprocess a source file
+src/Camera.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GravitySim3D.dir/build.make CMakeFiles/GravitySim3D.dir/src/Camera.cpp.i
+.PHONY : src/Camera.cpp.i
+
+src/Camera.s: src/Camera.cpp.s
+.PHONY : src/Camera.s
+
+# target to generate assembly for a file
+src/Camera.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GravitySim3D.dir/build.make CMakeFiles/GravitySim3D.dir/src/Camera.cpp.s
+.PHONY : src/Camera.cpp.s
+
+src/GLUtilities.o: src/GLUtilities.cpp.o
+.PHONY : src/GLUtilities.o
+
+# target to build an object file
+src/GLUtilities.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GravitySim3D.dir/build.make CMakeFiles/GravitySim3D.dir/src/GLUtilities.cpp.o
+.PHONY : src/GLUtilities.cpp.o
+
+src/GLUtilities.i: src/GLUtilities.cpp.i
+.PHONY : src/GLUtilities.i
+
+# target to preprocess a source file
+src/GLUtilities.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GravitySim3D.dir/build.make CMakeFiles/GravitySim3D.dir/src/GLUtilities.cpp.i
+.PHONY : src/GLUtilities.cpp.i
+
+src/GLUtilities.s: src/GLUtilities.cpp.s
+.PHONY : src/GLUtilities.s
+
+# target to generate assembly for a file
+src/GLUtilities.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GravitySim3D.dir/build.make CMakeFiles/GravitySim3D.dir/src/GLUtilities.cpp.s
+.PHONY : src/GLUtilities.cpp.s
+
+src/Mesh.o: src/Mesh.cpp.o
+.PHONY : src/Mesh.o
+
+# target to build an object file
+src/Mesh.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GravitySim3D.dir/build.make CMakeFiles/GravitySim3D.dir/src/Mesh.cpp.o
+.PHONY : src/Mesh.cpp.o
+
+src/Mesh.i: src/Mesh.cpp.i
+.PHONY : src/Mesh.i
+
+# target to preprocess a source file
+src/Mesh.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GravitySim3D.dir/build.make CMakeFiles/GravitySim3D.dir/src/Mesh.cpp.i
+.PHONY : src/Mesh.cpp.i
+
+src/Mesh.s: src/Mesh.cpp.s
+.PHONY : src/Mesh.s
+
+# target to generate assembly for a file
+src/Mesh.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GravitySim3D.dir/build.make CMakeFiles/GravitySim3D.dir/src/Mesh.cpp.s
+.PHONY : src/Mesh.cpp.s
+
+src/PhysicsEngine.o: src/PhysicsEngine.cpp.o
+.PHONY : src/PhysicsEngine.o
+
+# target to build an object file
+src/PhysicsEngine.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GravitySim3D.dir/build.make CMakeFiles/GravitySim3D.dir/src/PhysicsEngine.cpp.o
+.PHONY : src/PhysicsEngine.cpp.o
+
+src/PhysicsEngine.i: src/PhysicsEngine.cpp.i
+.PHONY : src/PhysicsEngine.i
+
+# target to preprocess a source file
+src/PhysicsEngine.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GravitySim3D.dir/build.make CMakeFiles/GravitySim3D.dir/src/PhysicsEngine.cpp.i
+.PHONY : src/PhysicsEngine.cpp.i
+
+src/PhysicsEngine.s: src/PhysicsEngine.cpp.s
+.PHONY : src/PhysicsEngine.s
+
+# target to generate assembly for a file
+src/PhysicsEngine.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GravitySim3D.dir/build.make CMakeFiles/GravitySim3D.dir/src/PhysicsEngine.cpp.s
+.PHONY : src/PhysicsEngine.cpp.s
+
+src/Shader.o: src/Shader.cpp.o
+.PHONY : src/Shader.o
+
+# target to build an object file
+src/Shader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GravitySim3D.dir/build.make CMakeFiles/GravitySim3D.dir/src/Shader.cpp.o
+.PHONY : src/Shader.cpp.o
+
+src/Shader.i: src/Shader.cpp.i
+.PHONY : src/Shader.i
+
+# target to preprocess a source file
+src/Shader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GravitySim3D.dir/build.make CMakeFiles/GravitySim3D.dir/src/Shader.cpp.i
+.PHONY : src/Shader.cpp.i
+
+src/Shader.s: src/Shader.cpp.s
+.PHONY : src/Shader.s
+
+# target to generate assembly for a file
+src/Shader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GravitySim3D.dir/build.make CMakeFiles/GravitySim3D.dir/src/Shader.cpp.s
+.PHONY : src/Shader.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -203,6 +323,21 @@ help:
 	@echo "... extern/glad/src/glad.o"
 	@echo "... extern/glad/src/glad.i"
 	@echo "... extern/glad/src/glad.s"
+	@echo "... src/Camera.o"
+	@echo "... src/Camera.i"
+	@echo "... src/Camera.s"
+	@echo "... src/GLUtilities.o"
+	@echo "... src/GLUtilities.i"
+	@echo "... src/GLUtilities.s"
+	@echo "... src/Mesh.o"
+	@echo "... src/Mesh.i"
+	@echo "... src/Mesh.s"
+	@echo "... src/PhysicsEngine.o"
+	@echo "... src/PhysicsEngine.i"
+	@echo "... src/PhysicsEngine.s"
+	@echo "... src/Shader.o"
+	@echo "... src/Shader.i"
+	@echo "... src/Shader.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

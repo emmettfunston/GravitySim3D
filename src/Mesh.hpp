@@ -8,7 +8,7 @@ class Mesh {
         ~Mesh();
         void draw() const;
     private:
-        GLunit VAO, VBO;
+        GLuint VAO, VBO;
         GLsizei vertexCount;
         GLenum mode;
 };

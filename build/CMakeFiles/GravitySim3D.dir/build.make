@@ -86,22 +86,101 @@ CMakeFiles/GravitySim3D.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GravitySim3D.dir/src/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/emmett/Documents/Repositories/GravitySim3D/src/main.cpp -o CMakeFiles/GravitySim3D.dir/src/main.cpp.s
 
+CMakeFiles/GravitySim3D.dir/src/GLUtilities.cpp.o: CMakeFiles/GravitySim3D.dir/flags.make
+CMakeFiles/GravitySim3D.dir/src/GLUtilities.cpp.o: /Users/emmett/Documents/Repositories/GravitySim3D/src/GLUtilities.cpp
+CMakeFiles/GravitySim3D.dir/src/GLUtilities.cpp.o: CMakeFiles/GravitySim3D.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/emmett/Documents/Repositories/GravitySim3D/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/GravitySim3D.dir/src/GLUtilities.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GravitySim3D.dir/src/GLUtilities.cpp.o -MF CMakeFiles/GravitySim3D.dir/src/GLUtilities.cpp.o.d -o CMakeFiles/GravitySim3D.dir/src/GLUtilities.cpp.o -c /Users/emmett/Documents/Repositories/GravitySim3D/src/GLUtilities.cpp
+
+CMakeFiles/GravitySim3D.dir/src/GLUtilities.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/GravitySim3D.dir/src/GLUtilities.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/emmett/Documents/Repositories/GravitySim3D/src/GLUtilities.cpp > CMakeFiles/GravitySim3D.dir/src/GLUtilities.cpp.i
+
+CMakeFiles/GravitySim3D.dir/src/GLUtilities.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GravitySim3D.dir/src/GLUtilities.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/emmett/Documents/Repositories/GravitySim3D/src/GLUtilities.cpp -o CMakeFiles/GravitySim3D.dir/src/GLUtilities.cpp.s
+
+CMakeFiles/GravitySim3D.dir/src/Shader.cpp.o: CMakeFiles/GravitySim3D.dir/flags.make
+CMakeFiles/GravitySim3D.dir/src/Shader.cpp.o: /Users/emmett/Documents/Repositories/GravitySim3D/src/Shader.cpp
+CMakeFiles/GravitySim3D.dir/src/Shader.cpp.o: CMakeFiles/GravitySim3D.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/emmett/Documents/Repositories/GravitySim3D/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/GravitySim3D.dir/src/Shader.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GravitySim3D.dir/src/Shader.cpp.o -MF CMakeFiles/GravitySim3D.dir/src/Shader.cpp.o.d -o CMakeFiles/GravitySim3D.dir/src/Shader.cpp.o -c /Users/emmett/Documents/Repositories/GravitySim3D/src/Shader.cpp
+
+CMakeFiles/GravitySim3D.dir/src/Shader.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/GravitySim3D.dir/src/Shader.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/emmett/Documents/Repositories/GravitySim3D/src/Shader.cpp > CMakeFiles/GravitySim3D.dir/src/Shader.cpp.i
+
+CMakeFiles/GravitySim3D.dir/src/Shader.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GravitySim3D.dir/src/Shader.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/emmett/Documents/Repositories/GravitySim3D/src/Shader.cpp -o CMakeFiles/GravitySim3D.dir/src/Shader.cpp.s
+
+CMakeFiles/GravitySim3D.dir/src/Mesh.cpp.o: CMakeFiles/GravitySim3D.dir/flags.make
+CMakeFiles/GravitySim3D.dir/src/Mesh.cpp.o: /Users/emmett/Documents/Repositories/GravitySim3D/src/Mesh.cpp
+CMakeFiles/GravitySim3D.dir/src/Mesh.cpp.o: CMakeFiles/GravitySim3D.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/emmett/Documents/Repositories/GravitySim3D/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/GravitySim3D.dir/src/Mesh.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GravitySim3D.dir/src/Mesh.cpp.o -MF CMakeFiles/GravitySim3D.dir/src/Mesh.cpp.o.d -o CMakeFiles/GravitySim3D.dir/src/Mesh.cpp.o -c /Users/emmett/Documents/Repositories/GravitySim3D/src/Mesh.cpp
+
+CMakeFiles/GravitySim3D.dir/src/Mesh.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/GravitySim3D.dir/src/Mesh.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/emmett/Documents/Repositories/GravitySim3D/src/Mesh.cpp > CMakeFiles/GravitySim3D.dir/src/Mesh.cpp.i
+
+CMakeFiles/GravitySim3D.dir/src/Mesh.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GravitySim3D.dir/src/Mesh.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/emmett/Documents/Repositories/GravitySim3D/src/Mesh.cpp -o CMakeFiles/GravitySim3D.dir/src/Mesh.cpp.s
+
+CMakeFiles/GravitySim3D.dir/src/PhysicsEngine.cpp.o: CMakeFiles/GravitySim3D.dir/flags.make
+CMakeFiles/GravitySim3D.dir/src/PhysicsEngine.cpp.o: /Users/emmett/Documents/Repositories/GravitySim3D/src/PhysicsEngine.cpp
+CMakeFiles/GravitySim3D.dir/src/PhysicsEngine.cpp.o: CMakeFiles/GravitySim3D.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/emmett/Documents/Repositories/GravitySim3D/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/GravitySim3D.dir/src/PhysicsEngine.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GravitySim3D.dir/src/PhysicsEngine.cpp.o -MF CMakeFiles/GravitySim3D.dir/src/PhysicsEngine.cpp.o.d -o CMakeFiles/GravitySim3D.dir/src/PhysicsEngine.cpp.o -c /Users/emmett/Documents/Repositories/GravitySim3D/src/PhysicsEngine.cpp
+
+CMakeFiles/GravitySim3D.dir/src/PhysicsEngine.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/GravitySim3D.dir/src/PhysicsEngine.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/emmett/Documents/Repositories/GravitySim3D/src/PhysicsEngine.cpp > CMakeFiles/GravitySim3D.dir/src/PhysicsEngine.cpp.i
+
+CMakeFiles/GravitySim3D.dir/src/PhysicsEngine.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GravitySim3D.dir/src/PhysicsEngine.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/emmett/Documents/Repositories/GravitySim3D/src/PhysicsEngine.cpp -o CMakeFiles/GravitySim3D.dir/src/PhysicsEngine.cpp.s
+
+CMakeFiles/GravitySim3D.dir/src/Camera.cpp.o: CMakeFiles/GravitySim3D.dir/flags.make
+CMakeFiles/GravitySim3D.dir/src/Camera.cpp.o: /Users/emmett/Documents/Repositories/GravitySim3D/src/Camera.cpp
+CMakeFiles/GravitySim3D.dir/src/Camera.cpp.o: CMakeFiles/GravitySim3D.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/emmett/Documents/Repositories/GravitySim3D/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/GravitySim3D.dir/src/Camera.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GravitySim3D.dir/src/Camera.cpp.o -MF CMakeFiles/GravitySim3D.dir/src/Camera.cpp.o.d -o CMakeFiles/GravitySim3D.dir/src/Camera.cpp.o -c /Users/emmett/Documents/Repositories/GravitySim3D/src/Camera.cpp
+
+CMakeFiles/GravitySim3D.dir/src/Camera.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/GravitySim3D.dir/src/Camera.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/emmett/Documents/Repositories/GravitySim3D/src/Camera.cpp > CMakeFiles/GravitySim3D.dir/src/Camera.cpp.i
+
+CMakeFiles/GravitySim3D.dir/src/Camera.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GravitySim3D.dir/src/Camera.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/emmett/Documents/Repositories/GravitySim3D/src/Camera.cpp -o CMakeFiles/GravitySim3D.dir/src/Camera.cpp.s
+
 # Object files for target GravitySim3D
 GravitySim3D_OBJECTS = \
-"CMakeFiles/GravitySim3D.dir/src/main.cpp.o"
+"CMakeFiles/GravitySim3D.dir/src/main.cpp.o" \
+"CMakeFiles/GravitySim3D.dir/src/GLUtilities.cpp.o" \
+"CMakeFiles/GravitySim3D.dir/src/Shader.cpp.o" \
+"CMakeFiles/GravitySim3D.dir/src/Mesh.cpp.o" \
+"CMakeFiles/GravitySim3D.dir/src/PhysicsEngine.cpp.o" \
+"CMakeFiles/GravitySim3D.dir/src/Camera.cpp.o"
 
 # External object files for target GravitySim3D
 GravitySim3D_EXTERNAL_OBJECTS =
 
 GravitySim3D: CMakeFiles/GravitySim3D.dir/src/main.cpp.o
+GravitySim3D: CMakeFiles/GravitySim3D.dir/src/GLUtilities.cpp.o
+GravitySim3D: CMakeFiles/GravitySim3D.dir/src/Shader.cpp.o
+GravitySim3D: CMakeFiles/GravitySim3D.dir/src/Mesh.cpp.o
+GravitySim3D: CMakeFiles/GravitySim3D.dir/src/PhysicsEngine.cpp.o
+GravitySim3D: CMakeFiles/GravitySim3D.dir/src/Camera.cpp.o
 GravitySim3D: CMakeFiles/GravitySim3D.dir/build.make
-GravitySim3D: /opt/homebrew/lib/libGLEW.2.2.0.dylib
 GravitySim3D: libglad.a
 GravitySim3D: /opt/homebrew/lib/libglfw.3.4.dylib
 GravitySim3D: /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework
 GravitySim3D: /opt/homebrew/lib/libglm.dylib
 GravitySim3D: CMakeFiles/GravitySim3D.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/emmett/Documents/Repositories/GravitySim3D/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable GravitySim3D"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/emmett/Documents/Repositories/GravitySim3D/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable GravitySim3D"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/GravitySim3D.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -6,7 +6,7 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/Users/emmett/Documents/Repositories/GravitySim3D/extern/glad/include -isystem /opt/homebrew/include -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks
 
-CXX_FLAGSarm64 = -std=c++17 -arch arm64 -F/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/System/Library/Frameworks  -Wall -Wextra -Wpedantic
+CXX_FLAGSarm64 = -std=c++17 -arch arm64 -Wall -Wextra -Wpedantic
 
-CXX_FLAGS = -std=c++17 -arch arm64 -F/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/System/Library/Frameworks  -Wall -Wextra -Wpedantic
+CXX_FLAGS = -std=c++17 -arch arm64 -Wall -Wextra -Wpedantic
 

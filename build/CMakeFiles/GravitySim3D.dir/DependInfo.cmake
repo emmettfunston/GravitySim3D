@@ -8,6 +8,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/Users/emmett/Documents/Repositories/GravitySim3D/src/Camera.cpp" "CMakeFiles/GravitySim3D.dir/src/Camera.cpp.o" "gcc" "CMakeFiles/GravitySim3D.dir/src/Camera.cpp.o.d"
+  "/Users/emmett/Documents/Repositories/GravitySim3D/src/GLUtilities.cpp" "CMakeFiles/GravitySim3D.dir/src/GLUtilities.cpp.o" "gcc" "CMakeFiles/GravitySim3D.dir/src/GLUtilities.cpp.o.d"
+  "/Users/emmett/Documents/Repositories/GravitySim3D/src/Mesh.cpp" "CMakeFiles/GravitySim3D.dir/src/Mesh.cpp.o" "gcc" "CMakeFiles/GravitySim3D.dir/src/Mesh.cpp.o.d"
+  "/Users/emmett/Documents/Repositories/GravitySim3D/src/PhysicsEngine.cpp" "CMakeFiles/GravitySim3D.dir/src/PhysicsEngine.cpp.o" "gcc" "CMakeFiles/GravitySim3D.dir/src/PhysicsEngine.cpp.o.d"
+  "/Users/emmett/Documents/Repositories/GravitySim3D/src/Shader.cpp" "CMakeFiles/GravitySim3D.dir/src/Shader.cpp.o" "gcc" "CMakeFiles/GravitySim3D.dir/src/Shader.cpp.o.d"
   "/Users/emmett/Documents/Repositories/GravitySim3D/src/main.cpp" "CMakeFiles/GravitySim3D.dir/src/main.cpp.o" "gcc" "CMakeFiles/GravitySim3D.dir/src/main.cpp.o.d"
   )
 

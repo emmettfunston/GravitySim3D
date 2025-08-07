@@ -7,8 +7,8 @@ Shader::Shader(const std::string& vertexPath, const std::string& fragmentPath) {
     std::string vertCode = loadFile(vertexPath);
     std::string fragCode = loadFile(fragmentPath);
 
-    GLunit vert = compile(GL_VERTEX_SHADER, vertCode);
-    GLunit frag = compile(GL_FRAGMENT_SHADER, fragCode);
+    GLuint vert = compile(GL_VERTEX_SHADER, vertCode);
+    GLuint frag = compile(GL_FRAGMENT_SHADER, fragCode);
 
     programID = glCreateProgram();
     glAttachShader(programID, vert);
@@ -32,7 +32,7 @@ Shader::~Shader() {
 }
 
 void Shader::use() const { glUseProgram(programID); }
-GLunit Shader::id() const { return programID; }
+GLuint Shader::id() const { return programID; }
 
 std::string Shader::loadFile(const std::string& path) const {
     std::ifstream file(path);
@@ -41,8 +41,8 @@ std::string Shader::loadFile(const std::string& path) const {
     return ss.str();
 }
 
-GLunit Shader::compile(GLenum type, const std::string& source) const {
-    GLunit shader = glCreateShader(type);
+GLuint Shader::compile(GLenum type, const std::string& source) const {
+    GLuint shader = glCreateShader(type);
     const char* src = source.c_str();
     glShaderSource(shader, 1, &src, nullptr);
     glCompileShader(shader);
