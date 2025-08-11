@@ -1,0 +1,37 @@
+{
+    "files.associations": {
+        "*.hpp": "cpp",
+        "*.h": "cpp",
+        "*.cpp": "cpp",
+        "*.glsl": "glsl"
+    },
+    "C_Cpp.default.cppStandard": "c++17",
+    "C_Cpp.default.cStandard": "c11",
+    "C_Cpp.default.compilerPath": "/usr/bin/clang++",
+    "C_Cpp.default.intelliSenseMode": "macos-clang-x64",
+    "C_Cpp.default.includePath": [
+        "${workspaceFolder}/**",
+        "${workspaceFolder}/extern/glad/include",
+        "${workspaceFolder}/extern/glm"
+    ],
+    "C_Cpp.default.defines": [
+        "GLFW_INCLUDE_NONE"
+    ],
+    "C_Cpp.default.browse.path": [
+        "${workspaceFolder}/**",
+        "${workspaceFolder}/extern/glad/include",
+        "${workspaceFolder}/extern/glm"
+    ],
+    "C_Cpp.errorSquiggles": "enabled",
+    "C_Cpp.autoAddFileAssociations": true,
+    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+    "cmake.configureOnOpen": true,
+    "cmake.buildDirectory": "${workspaceFolder}/build",
+    "files.exclude": {
+        "**/build": true,
+        "**/.vscode": false
+    },
+    "search.exclude": {
+        "**/build": true
+    }
+} 

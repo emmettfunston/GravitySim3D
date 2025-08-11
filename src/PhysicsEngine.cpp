@@ -13,7 +13,8 @@ void PhysicsEngine::update(float dt) {
             glm::vec3 dir=bodies[j].position - bodies[i].position;
             float dist2 = glm::dot(dir, dir) + 1e-6f;
             float invDist = 1.0f / sqrt(dist2);
-            float force = G * bodies[i].mass * bodies[j].mass * invDist * invDist;
+            // Scale up gravity for visual effect
+            float force = 0.1f * bodies[i].mass * bodies[j].mass * invDist * invDist;
             accel += dir * (force/bodies[i].mass*invDist);
             }
         }

@@ -3,7 +3,12 @@
 
 Camera*Camera::instance = nullptr;
 Camera::Camera(glm::vec3 pos, float y, float p) : position(pos), yaw(y), pitch(p), speed(10.0f), sensitivity(0.1f) {
-    front = {0, 0, -1};
+    // Calculate front vector based on yaw and pitch
+    glm::vec3 d;
+    d.x = cos(glm::radians(yaw)) * cos(glm::radians(pitch));
+    d.y = sin(glm::radians(pitch));
+    d.z = sin(glm::radians(yaw)) * cos(glm::radians(pitch));
+    front = glm::normalize(d);
     up = {0, 1, 0};
     instance = this;
 }
@@ -34,12 +39,23 @@ void Camera::processMouse(float xoff, float yoff) {
     front = glm::normalize(d);
 }
 
-void Camera::keyCallback(GLFWwindow*, int key, int, int action, int) {
+void Camera::keyCallback(GLFWwindow* window, int key, int, int action, int) {
+    if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS) {
+        glfwSetWindowShouldClose(window, true);
+    }
     if (instance&&(action == GLFW_PRESS || action == GLFW_REPEAT)) instance->processKeyboard(key, float(glfwGetTime()));
 }
 
 void Camera::mouseCallback(GLFWwindow*, double xpos, double ypos) {
-    static double lx=400, ly=300;
+    static double lx = 0, ly = 0;
+    static bool firstMouse = true;
+    
+    if (firstMouse) {
+        lx = xpos;
+        ly = ypos;
+        firstMouse = false;
+    }
+    
     double xoff = xpos - lx, yoff = ly - ypos;
     lx = xpos;
     ly = ypos;
