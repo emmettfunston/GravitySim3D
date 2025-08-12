@@ -6,6 +6,7 @@ class Camera {
 public:
     Camera(glm::vec3 pos, float yaw, float pitch);
     glm::mat4 getViewMatrix() const;
+    glm::vec3 getPosition() const;
     void processKeyboard(int key, float dt);
     void processMouse(float xoff, float yoff);
     static void keyCallback(GLFWwindow*, int, int, int, int);

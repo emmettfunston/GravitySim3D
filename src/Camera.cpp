@@ -2,7 +2,7 @@
 #include <glm/gtc/matrix_transform.hpp>
 
 Camera*Camera::instance = nullptr;
-Camera::Camera(glm::vec3 pos, float y, float p) : position(pos), yaw(y), pitch(p), speed(10.0f), sensitivity(0.1f) {
+Camera::Camera(glm::vec3 pos, float y, float p) : position(pos), yaw(y), pitch(p), speed(1.0f), sensitivity(0.05f) {
     // Calculate front vector based on yaw and pitch
     glm::vec3 d;
     d.x = cos(glm::radians(yaw)) * cos(glm::radians(pitch));
@@ -17,12 +17,18 @@ glm::mat4 Camera::getViewMatrix() const {
     return glm::lookAt(position, position + front, up);
 }
 
+glm::vec3 Camera::getPosition() const {
+    return position;
+}
+
 void Camera::processKeyboard(int key, float dt) {
     float v = speed * dt;
     if (key == GLFW_KEY_W) position += front * v;
     if (key == GLFW_KEY_S) position -= front * v;
     if (key == GLFW_KEY_A) position -= glm::normalize(glm::cross(front, up)) * v;
     if (key == GLFW_KEY_D) position += glm::normalize(glm::cross(front, up)) * v;
+    if (key == GLFW_KEY_Q) position += up * v; // Move up
+    if (key == GLFW_KEY_E) position -= up * v; // Move down
 }
 
 void Camera::processMouse(float xoff, float yoff) {
