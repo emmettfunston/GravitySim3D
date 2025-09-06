@@ -2,7 +2,7 @@
 #include <glm/gtc/matrix_transform.hpp>
 
 Camera*Camera::instance = nullptr;
-Camera::Camera(glm::vec3 pos, float y, float p) : position(pos), yaw(y), pitch(p), speed(1.0f), sensitivity(0.05f) {
+Camera::Camera(glm::vec3 pos, float y, float p) : position(pos), yaw(y), pitch(p), speed(0.05f), sensitivity(0.005f) {
     // Calculate front vector based on yaw and pitch
     glm::vec3 d;
     d.x = cos(glm::radians(yaw)) * cos(glm::radians(pitch));

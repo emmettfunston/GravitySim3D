@@ -1,0 +1,64 @@
+{
+  "objects": [
+    {
+      "name": "sun",
+      "type": "central",
+      "position": [0.0, 0.0, 0.0],
+      "velocity": [0.0, 0.0, 0.0],
+      "mass": 20.0,
+      "radius": 0.2,
+      "color": [1.0, 0.7, 0.2],
+      "description": "Central massive object (like the sun)"
+    },
+    {
+      "name": "planet1",
+      "type": "orbiting",
+      "position": [3.0, 0.0, 0.0],
+      "velocity": [0.0, 0.0, 0.0],
+      "mass": 1.0,
+      "radius": 0.15,
+      "color": [0.2, 0.8, 1.0],
+      "description": "First orbiting planet (blue)"
+    },
+    {
+      "name": "planet2",
+      "type": "orbiting",
+      "position": [4.5, 0.0, 0.0],
+      "velocity": [0.0, 0.0, 0.0],
+      "description": "Second orbiting planet (purple)"
+    },
+    {
+      "name": "planet3",
+      "type": "orbiting",
+      "position": [6.0, 0.0, 0.0],
+      "velocity": [0.0, 0.0, 0.0],
+      "mass": 0.6,
+      "radius": 0.12,
+      "color": [0.9, 0.4, 0.8],
+      "description": "Third orbiting planet (pink)"
+    },
+    {
+      "name": "asteroid1",
+      "type": "asteroid",
+      "position": [2.0, 0.0, 2.0],
+      "velocity": [0.0, 0.0, 0.0],
+      "mass": 0.1,
+      "radius": 0.08,
+      "color": [0.8, 0.8, 0.8],
+      "description": "Small asteroid (gray)"
+    }
+  ],
+  "physics": {
+    "gravityConstant": 0.02,
+    "damping": 0.999,
+    "maxVelocity": 1.2,
+    "minDistance": 1.2,
+    "boundaryRadius": 12.0
+  },
+  "visual": {
+    "netGridSize": 15.0,
+    "deformationStrength": 0.8,
+    "shadowSize": 30.0,
+    "shadowOpacity": 0.6
+  }
+} 

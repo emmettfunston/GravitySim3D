@@ -12,6 +12,8 @@ make          # or cmake --build .
 #include "Mesh.hpp"
 #include "PhysicsEngine.hpp"
 #include "Camera.hpp"
+#include "ConfigLoader.hpp"
+#include "InteractiveGUI.hpp"
 #include <vector>
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
@@ -22,6 +24,13 @@ int main() {
     if(!initWindow(800, 600, "GravitySim3D", window)) return -1;
     
     std::cout << "Window initialized successfully!" << std::endl;
+    
+    // Initialize Interactive GUI
+    InteractiveGUI::init(window);
+    
+    // Load configuration
+    SimulationConfig config = ConfigLoader::loadConfig("../config/simulation.json");
+    bool configChanged = true; // Start with true to initialize physics engine
     
     Shader shader("../shaders/basic.vs.glsl", "../shaders/basic.fs.glsl"); 
     Shader backgroundShader("../shaders/background.vs.glsl", "../shaders/background.fs.glsl");
@@ -73,22 +82,30 @@ int main() {
     std::cout << "Grid mesh created with " << gridVertices.size() / 3 << " vertices" << std::endl;
 
     PhysicsEngine phys;
-    // Central body (more massive - like the sun)
-    phys.addBody({ {0.0f, 0.0f, 0.0f}, {0.0f, 0.0f, 0.0f}, 20.0f });
     
-    // Orbiting body with calculated orbital velocity for circular orbit
-    float orbitalRadius = 6.0f;
-    float orbitalVelocity = sqrt(0.02f * 20.0f / orbitalRadius) * 0.95f; // Adjusted for new gravity constant
-    phys.addBody({ {orbitalRadius, 0.0f, 0.0f}, {0.0f, 0.0f, orbitalVelocity}, 1.0f });
+    // Function to recreate physics engine when config changes
+    auto recreatePhysicsEngine = [&]() {
+        phys = PhysicsEngine(); // Clear and recreate
+        for (const auto& objConfig : config.objects) {
+            // Calculate orbital velocity for orbiting objects
+            glm::vec3 velocity = objConfig.velocity;
+            if (objConfig.type == "orbiting") {
+                float orbitalRadius = glm::length(objConfig.position);
+                float orbitalVelocity = sqrt(config.physics.gravityConstant * config.objects[0].mass / orbitalRadius) * 0.9f;
+                velocity = glm::vec3(0.0f, 0.0f, orbitalVelocity);
+            }
+            
+            phys.addBody({objConfig.position, velocity, objConfig.mass});
+            std::cout << "Added " << objConfig.name << " at position " 
+                      << objConfig.position.x << ", " << objConfig.position.y << ", " << objConfig.position.z << std::endl;
+        }
+        std::cout << "Recreated physics engine with " << config.objects.size() << " bodies" << std::endl;
+    };
     
-    // Add a third body for more visual interest
-    float outerRadius = 9.0f;
-    float outerVelocity = sqrt(0.02f * 20.0f / outerRadius) * 0.9f; // Adjusted for new gravity constant
-    phys.addBody({ {outerRadius, 0.0f, 0.0f}, {0.0f, 0.0f, outerVelocity}, 0.8f });
+    // Initial creation
+    recreatePhysicsEngine();
     
-    std::cout << "Added 3 physics bodies" << std::endl;
-
-    Camera cam({0, 8, 0}, -90, -90); // Top-down view for 2D simulation
+    Camera cam({0, 6, 8}, -90, -45); // Angled view, not directly above
     glfwSetKeyCallback(window, Camera::keyCallback);
     glfwSetCursorPosCallback(window, Camera::mouseCallback);
     
@@ -114,6 +131,13 @@ int main() {
 
     while(!glfwWindowShouldClose(window)) {
         float dt = 0.016f; // Fixed timestep for stability
+        
+        // Recreate physics engine if config changed
+        if (configChanged) {
+            recreatePhysicsEngine();
+            configChanged = false;
+        }
+        
         phys.update(dt);
         
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -132,31 +156,32 @@ int main() {
         shader.setUniform("view", cam.getViewMatrix());
         
         const auto& bodies = phys.getBodies();
-        for (size_t i = 0; i < bodies.size(); ++i) {
+        for (size_t i = 0; i < bodies.size() && i < config.objects.size(); ++i) {
             const auto& body = bodies[i];
+            const auto& objConfig = config.objects[i];
             
-            // Scale based on mass for visual effect
-            float scale = 0.5f + body.mass * 0.3f;
+            // Scale based on mass and configured radius for visual effect
+            float scale = objConfig.radius * 2.0f; // Scale the configured radius
             glm::mat4 model = glm::translate(glm::mat4(1.0f), body.position);
             model = glm::scale(model, glm::vec3(scale));
             
             shader.setUniform("model", model);
             
-            // Set different colors for different bodies
-            if (i == 0) {
-                shader.setUniform("bodyColor", glm::vec3(1.0f, 0.7f, 0.2f)); // Bright orange
-            } else if (i == 1) {
-                shader.setUniform("bodyColor", glm::vec3(0.2f, 0.8f, 1.0f)); // Blue
-            } else {
-                shader.setUniform("bodyColor", glm::vec3(0.8f, 0.2f, 0.9f)); // Purple
-            }
+            // Use configured color for each object
+            shader.setUniform("bodyColor", objConfig.color);
             
             sphere.draw();
         }
         
+        // Render Interactive GUI
+        InteractiveGUI::render(config, configChanged);
+        
         glfwSwapBuffers(window);
         glfwPollEvents();
     }
+    
+    // Cleanup
+    InteractiveGUI::shutdown();
     cleanupWindow(window);
     return 0;
 }

@@ -19,6 +19,9 @@ add_executable(${PROJECT_NAME}
     src/Mesh.cpp
     src/PhysicsEngine.cpp
     src/Camera.cpp
+    src/ConfigLoader.cpp
+    src/InteractiveGUI.cpp
+    extern/imgui/imgui.cpp
 )
 
 target_link_libraries(${PROJECT_NAME}
